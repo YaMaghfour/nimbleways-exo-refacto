@@ -22,7 +22,8 @@ namespace Refacto.DotNet.BLL.Strategies
             {
                 { Constants.ProductType.NORMAL, new NormalProductHandler() },
                 { Constants.ProductType.SEASONAL, new SeasonalProductHandler() },
-                { Constants.ProductType.EXPIRABLE, new ExpirableProductHandler() }
+                { Constants.ProductType.EXPIRABLE, new ExpirableProductHandler() },
+                { Constants.ProductType.FLASHSALE, new FlashSaleProductHandler() },
             };
         }
 
