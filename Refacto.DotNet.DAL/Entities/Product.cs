@@ -17,6 +17,9 @@ namespace Refacto.DotNet.DAL.Entities
         [Column("available")]
         public int Available { get; set; }
 
+        [Column("vendu")]
+        public int Vendu { get; set; }
+
         [Column("type")]
         public string? Type { get; set; }
 
