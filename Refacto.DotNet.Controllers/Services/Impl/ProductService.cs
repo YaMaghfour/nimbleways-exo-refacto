@@ -23,13 +23,13 @@ namespace Refacto.DotNet.Controllers.Services.Impl
 
         public void HandleSeasonalProduct(Product p)
         {
-            if (DateTime.Now.AddDays(p.LeadTime) > p.SeasonEndDate)
+            if (DateTime.Now.AddDays(p.LeadTime) > p.EndDate)
             {
                 _ns.SendOutOfStockNotification(p.Name);
                 p.Available = 0;
                 _ = _ctx.SaveChanges();
             }
-            else if (p.SeasonStartDate > DateTime.Now)
+            else if (p.StartDate > DateTime.Now)
             {
                 _ns.SendOutOfStockNotification(p.Name);
                 _ = _ctx.SaveChanges();

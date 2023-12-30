@@ -79,8 +79,8 @@ namespace Refacto.Dotnet.Controllers.Tests.Controllers
                 new Product { LeadTime = 10, Available = 0, Type = "NORMAL", Name = "USB Dongle" },
                 new Product { LeadTime = 15, Available = 30, Type = "EXPIRABLE", Name = "Butter", ExpiryDate = DateTime.Now.AddDays(26) },
                 new Product { LeadTime = 90, Available = 6, Type = "EXPIRABLE", Name = "Milk", ExpiryDate = DateTime.Now.AddDays(-2) },
-                new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Watermelon", SeasonStartDate = DateTime.Now.AddDays(-2), SeasonEndDate = DateTime.Now.AddDays(58) },
-                new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Grapes", SeasonStartDate = DateTime.Now.AddDays(180), SeasonEndDate = DateTime.Now.AddDays(240) }
+                new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Watermelon", StartDate = DateTime.Now.AddDays(-2), EndDate = DateTime.Now.AddDays(58) },
+                new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Grapes", StartDate = DateTime.Now.AddDays(180), EndDate = DateTime.Now.AddDays(240) }
             };
         }
     }

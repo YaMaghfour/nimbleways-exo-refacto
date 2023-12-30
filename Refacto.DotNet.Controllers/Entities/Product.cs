@@ -26,10 +26,13 @@ namespace Refacto.DotNet.Controllers.Entities
         [Column("expiry_date")]
         public DateTime? ExpiryDate { get; set; }
 
-        [Column("season_start_date")]
-        public DateTime? SeasonStartDate { get; set; }
+        [Column("start_date")]
+        public DateTime? StartDate { get; set; }
 
-        [Column("season_end_date")]
-        public DateTime? SeasonEndDate { get; set; }
+        [Column("end_date")]
+        public DateTime? EndDate { get; set; }
+
+        [Column("max_sale_qty")]
+        public int? MaxSellQuantity { get; set; }
     }
 }

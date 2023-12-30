@@ -52,7 +52,7 @@ namespace Refacto.DotNet.Controllers.Controllers
                 }
                 else if (p.Type == "SEASONAL")
                 {
-                    if (DateTime.Now.Date > p.SeasonStartDate && DateTime.Now.Date < p.SeasonEndDate && p.Available > 0)
+                    if (DateTime.Now.Date > p.StartDate && DateTime.Now.Date < p.EndDate && p.Available > 0)
                     {
                         p.Available -= 1;
                         _ = _ctx.SaveChanges();
