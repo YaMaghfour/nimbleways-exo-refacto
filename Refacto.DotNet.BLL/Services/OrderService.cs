@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Refacto.DotNet.BLL.Strategies;
 using Refacto.DotNet.DAL.Database.Context;
 using Refacto.DotNet.DAL.Entities;
 using Refacto.DotNet.Interfaces.Services;
@@ -35,51 +36,10 @@ namespace Refacto.DotNet.BLL.Services
             List<long> ids = new() { OrderId };
             ICollection<Product>? products = order.Items;
 
-            foreach (Product p in products)
-            {
-                if (p.Type == Constants.ProductType.NORMAL)
-                {
-                    if (p.Available > 0)
-                    {
-                        p.Available -= 1;
-                        _ctx.Entry(p).State = EntityState.Modified;
-                        _ = _ctx.SaveChanges();
+            ProductProcessor productProcessor = new();
 
-                    }
-                    else
-                    {
-                        int leadTime = p.LeadTime;
-                        if (leadTime > 0)
-                        {
-                            _productService.NotifyDelay(leadTime, p);
-                        }
-                    }
-                }
-                else if (p.Type == Constants.ProductType.SEASONAL)
-                {
-                    if (DateTime.Now.Date > p.StartDate && DateTime.Now.Date < p.EndDate && p.Available > 0)
-                    {
-                        p.Available -= 1;
-                        _ = _ctx.SaveChanges();
-                    }
-                    else
-                    {
-                        _productService.HandleSeasonalProduct(p);
-                    }
-                }
-                else if (p.Type == Constants.ProductType.EXPIRABLE)
-                {
-                    if (p.Available > 0 && p.ExpiryDate > DateTime.Now.Date)
-                    {
-                        p.Available -= 1;
-                        _ = _ctx.SaveChanges();
-                    }
-                    else
-                    {
-                        _productService.HandleExpiredProduct(p);
-                    }
-                }
-            }
+            foreach (Product p in products)
+                productProcessor.ProcessProduct(p, _ctx, _productService);
 
             return order;
         }
