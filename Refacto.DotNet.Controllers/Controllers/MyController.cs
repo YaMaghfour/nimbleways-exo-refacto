@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Refacto.DotNet.Controllers.Database.Context;
 using Refacto.DotNet.Controllers.Dtos.Product;
+using Refacto.DotNet.Controllers.Services;
 using Refacto.DotNet.Controllers.Services.Impl;
 
 namespace Refacto.DotNet.Controllers.Controllers
@@ -10,10 +11,10 @@ namespace Refacto.DotNet.Controllers.Controllers
     [Route("orders")]
     public class OrdersController : ControllerBase
     {
-        private readonly ProductService _ps;
+        private readonly IProductService _ps;
         private readonly AppDbContext _ctx;
 
-        public OrdersController(ProductService ps, AppDbContext ctx)
+        public OrdersController(IProductService ps, AppDbContext ctx)
         {
             _ps = ps;
             _ctx = ctx;

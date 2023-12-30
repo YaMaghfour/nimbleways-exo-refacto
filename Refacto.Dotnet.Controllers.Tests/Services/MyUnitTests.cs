@@ -13,7 +13,7 @@ namespace Refacto.DotNet.Controllers.Tests.Services
         private readonly Mock<INotificationService> _mockNotificationService;
         private readonly Mock<AppDbContext> _mockDbContext;
         private readonly Mock<DbSet<Product>> _mockDbSet;
-        private readonly ProductService _productService;
+        private readonly IProductService _productService;
 
         public MyUnitTests()
         {
