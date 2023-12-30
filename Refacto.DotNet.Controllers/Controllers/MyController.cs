@@ -9,73 +9,23 @@ namespace Refacto.DotNet.Controllers.Controllers
     [Route("orders")]
     public class OrdersController : ControllerBase
     {
-        private readonly IProductService _ps;
-        //private readonly AppDbContext _ctx;
+        private readonly IOrderService _orderService;
 
-        public OrdersController(IProductService ps)
+        public OrdersController(IOrderService orderService)
         {
-            _ps = ps;
+            _orderService = orderService;
         }
 
         [HttpPost("{orderId}/processOrder")]
         [ProducesResponseType(200)]
         public ActionResult<ProcessOrderResponse> ProcessOrder(long orderId)
         {
-            throw new NotImplementedException();
-            //Entities.Order? order = _ctx.Orders
-            //    .Include(o => o.Items)
-            //    .SingleOrDefault(o => o.Id == orderId);
-            //Console.WriteLine(order);
-            //List<long> ids = new() { orderId };
-            //ICollection<Entities.Product>? products = order.Items;
+            var order = _orderService.ProcessOrder(orderId);
 
-            //foreach (Entities.Product p in products)
-            //{
-            //    if (p.Type == "NORMAL")
-            //    {
-            //        if (p.Available > 0)
-            //        {
-            //            p.Available -= 1;
-            //            _ctx.Entry(p).State = EntityState.Modified;
-            //            _ = _ctx.SaveChanges();
+            if (order == null)
+                return NotFound($"Could not find order N° {orderId}");
 
-            //        }
-            //        else
-            //        {
-            //            int leadTime = p.LeadTime;
-            //            if (leadTime > 0)
-            //            {
-            //                _ps.NotifyDelay(leadTime, p);
-            //            }
-            //        }
-            //    }
-            //    else if (p.Type == "SEASONAL")
-            //    {
-            //        if (DateTime.Now.Date > p.StartDate && DateTime.Now.Date < p.EndDate && p.Available > 0)
-            //        {
-            //            p.Available -= 1;
-            //            _ = _ctx.SaveChanges();
-            //        }
-            //        else
-            //        {
-            //            _ps.HandleSeasonalProduct(p);
-            //        }
-            //    }
-            //    else if (p.Type == "EXPIRABLE")
-            //    {
-            //        if (p.Available > 0 && p.ExpiryDate > DateTime.Now.Date)
-            //        {
-            //            p.Available -= 1;
-            //            _ = _ctx.SaveChanges();
-            //        }
-            //        else
-            //        {
-            //            _ps.HandleExpiredProduct(p);
-            //        }
-            //    }
-            //}
-
-            //return new ProcessOrderResponse(order.Id);
+            return Ok(new ProcessOrderResponse(order.Id));
         }
     }
 }
