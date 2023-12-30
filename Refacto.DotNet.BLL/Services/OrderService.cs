@@ -37,7 +37,7 @@ namespace Refacto.DotNet.BLL.Services
 
             foreach (Product p in products)
             {
-                if (p.Type == "NORMAL")
+                if (p.Type == Constants.ProductType.NORMAL)
                 {
                     if (p.Available > 0)
                     {
@@ -55,7 +55,7 @@ namespace Refacto.DotNet.BLL.Services
                         }
                     }
                 }
-                else if (p.Type == "SEASONAL")
+                else if (p.Type == Constants.ProductType.SEASONAL)
                 {
                     if (DateTime.Now.Date > p.StartDate && DateTime.Now.Date < p.EndDate && p.Available > 0)
                     {
@@ -67,7 +67,7 @@ namespace Refacto.DotNet.BLL.Services
                         _productService.HandleSeasonalProduct(p);
                     }
                 }
-                else if (p.Type == "EXPIRABLE")
+                else if (p.Type == Constants.ProductType.EXPIRABLE)
                 {
                     if (p.Available > 0 && p.ExpiryDate > DateTime.Now.Date)
                     {
