@@ -13,4 +13,10 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Refacto.DotNet.BLL\Refacto.DotNet.BLL.csproj" />
+    <ProjectReference Include="..\Refacto.DotNet.DTO\Refacto.DotNet.DTO.csproj" />
+    <ProjectReference Include="..\Refactor.DotNet.Interfaces\Refacto.DotNet.Interfaces.csproj" />
+  </ItemGroup>
+
 </Project>

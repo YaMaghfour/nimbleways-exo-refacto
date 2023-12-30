@@ -2,9 +2,9 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
-using Refacto.DotNet.Controllers.Database.Context;
-using Refacto.DotNet.Controllers.Entities;
-using Refacto.DotNet.Controllers.Services;
+using Refacto.DotNet.DAL.Database.Context;
+using Refacto.DotNet.DAL.Entities;
+using Refacto.DotNet.Interfaces.Services;
 
 namespace Refacto.Dotnet.Controllers.Tests.Controllers
 {

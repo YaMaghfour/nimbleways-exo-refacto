@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Refacto.DotNet.Controllers.Entities
+namespace Refacto.DotNet.DAL.Entities
 {
     [Table("orders")]
     public class Order

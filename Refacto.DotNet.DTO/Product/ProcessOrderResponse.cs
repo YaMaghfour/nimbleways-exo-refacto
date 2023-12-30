@@ -1,4 +1,4 @@
-﻿namespace Refacto.DotNet.Controllers.Dtos.Product
+﻿namespace Refacto.DotNet.DTO.Product
 {
     public record ProcessOrderResponse(long id);
 }

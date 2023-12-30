@@ -1,7 +1,8 @@
-﻿using Refacto.DotNet.Controllers.Database.Context;
-using Refacto.DotNet.Controllers.Entities;
+﻿using Refacto.DotNet.DAL.Database.Context;
+using Refacto.DotNet.DAL.Entities;
+using Refacto.DotNet.Interfaces.Services;
 
-namespace Refacto.DotNet.Controllers.Services.Impl
+namespace Refacto.DotNet.BLL.Services
 {
     public class ProductService : IProductService
     {

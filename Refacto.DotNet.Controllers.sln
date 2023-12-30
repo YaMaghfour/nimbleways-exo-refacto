@@ -3,9 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.Controllers", "Refacto.DotNet.Controllers\Refacto.DotNet.Controllers.csproj", "{959D9DCF-CEDF-4C78-864D-8FAF9C273670}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.DotNet.Controllers", "Refacto.DotNet.Controllers\Refacto.DotNet.Controllers.csproj", "{959D9DCF-CEDF-4C78-864D-8FAF9C273670}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.Dotnet.Controllers.Tests", "Refacto.Dotnet.Controllers.Tests\Refacto.Dotnet.Controllers.Tests.csproj", "{D94EB8F1-7263-46EB-888F-CDFD98945776}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.Dotnet.Controllers.Tests", "Refacto.Dotnet.Controllers.Tests\Refacto.Dotnet.Controllers.Tests.csproj", "{D94EB8F1-7263-46EB-888F-CDFD98945776}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.Interfaces", "Refactor.DotNet.Interfaces\Refacto.DotNet.Interfaces.csproj", "{683CA13D-A865-4247-94D5-AB3BFAF03FEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.DAL", "Refacto.DotNet.DAL\Refacto.DotNet.DAL.csproj", "{F8523F3E-4E8C-4C0C-AE32-A964C687104A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.BLL", "Refacto.DotNet.BLL\Refacto.DotNet.BLL.csproj", "{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.DTO", "Refacto.DotNet.DTO\Refacto.DotNet.DTO.csproj", "{384F0FAC-BF67-460A-8443-6156A9F91A72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +29,22 @@ Global
 		{D94EB8F1-7263-46EB-888F-CDFD98945776}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D94EB8F1-7263-46EB-888F-CDFD98945776}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D94EB8F1-7263-46EB-888F-CDFD98945776}.Release|Any CPU.Build.0 = Release|Any CPU
+		{683CA13D-A865-4247-94D5-AB3BFAF03FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{683CA13D-A865-4247-94D5-AB3BFAF03FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{683CA13D-A865-4247-94D5-AB3BFAF03FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{683CA13D-A865-4247-94D5-AB3BFAF03FEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F8523F3E-4E8C-4C0C-AE32-A964C687104A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8523F3E-4E8C-4C0C-AE32-A964C687104A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8523F3E-4E8C-4C0C-AE32-A964C687104A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8523F3E-4E8C-4C0C-AE32-A964C687104A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
