@@ -55,5 +55,11 @@ namespace Refacto.DotNet.BLL.Services
                 _ = _ctx.SaveChanges();
             }
         }
+
+        public void HandleFlashSaleProduct(Product p)
+        {
+            //Add notification logic here
+        }
+
     }
 }

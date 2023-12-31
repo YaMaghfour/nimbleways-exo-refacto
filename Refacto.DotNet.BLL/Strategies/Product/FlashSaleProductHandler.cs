@@ -21,14 +21,14 @@ namespace Refacto.DotNet.BLL.Strategies.Product
             }
             else
             {
-                _productService.HandleExpiredProduct(product);
+                _productService.HandleFlashSaleProduct(product);
             }
         }
 
         private bool IsAvailableFlashSaleProduct(DAL.Entities.Product Product)
         {
             return Product.Available > 0
-                && DateTime.Now.Date >= Product.StartDate && DateTime.Now.Date <= Product.StartDate
+                && DateTime.Now.Date >= Product.StartDate && DateTime.Now.Date <= Product.EndDate
                 && Product.Vendu < Product.MaxSellQuantity;
         }
 
