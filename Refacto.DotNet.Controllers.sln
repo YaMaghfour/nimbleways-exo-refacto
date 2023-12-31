@@ -7,13 +7,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.DotNet.Controllers"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.Dotnet.Controllers.Tests", "Refacto.Dotnet.Controllers.Tests\Refacto.Dotnet.Controllers.Tests.csproj", "{D94EB8F1-7263-46EB-888F-CDFD98945776}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.Interfaces", "Refactor.DotNet.Interfaces\Refacto.DotNet.Interfaces.csproj", "{683CA13D-A865-4247-94D5-AB3BFAF03FEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.DotNet.Interfaces", "Refactor.DotNet.Interfaces\Refacto.DotNet.Interfaces.csproj", "{683CA13D-A865-4247-94D5-AB3BFAF03FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.DAL", "Refacto.DotNet.DAL\Refacto.DotNet.DAL.csproj", "{F8523F3E-4E8C-4C0C-AE32-A964C687104A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.DotNet.DAL", "Refacto.DotNet.DAL\Refacto.DotNet.DAL.csproj", "{F8523F3E-4E8C-4C0C-AE32-A964C687104A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.BLL", "Refacto.DotNet.BLL\Refacto.DotNet.BLL.csproj", "{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.DotNet.BLL", "Refacto.DotNet.BLL\Refacto.DotNet.BLL.csproj", "{9E9E66D6-CB5C-421D-B5C3-07083D4A584E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.DTO", "Refacto.DotNet.DTO\Refacto.DotNet.DTO.csproj", "{384F0FAC-BF67-460A-8443-6156A9F91A72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Refacto.DotNet.DTO", "Refacto.DotNet.DTO\Refacto.DotNet.DTO.csproj", "{384F0FAC-BF67-460A-8443-6156A9F91A72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Refacto.DotNet.Triggers", "Refacto.DotNet.Triggers\Refacto.DotNet.Triggers.csproj", "{52A0A01D-09D7-43B7-A351-F62DC603E692}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{384F0FAC-BF67-460A-8443-6156A9F91A72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52A0A01D-09D7-43B7-A351-F62DC603E692}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52A0A01D-09D7-43B7-A351-F62DC603E692}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52A0A01D-09D7-43B7-A351-F62DC603E692}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52A0A01D-09D7-43B7-A351-F62DC603E692}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

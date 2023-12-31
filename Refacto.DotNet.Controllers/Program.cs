@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Refacto.DotNet.BLL.Services;
 using Refacto.DotNet.DAL.Database.Context;
 using Refacto.DotNet.Interfaces.Services;
+using Refacto.DotNet.Triggers;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
@@ -17,6 +18,10 @@ builder.Services.AddScoped<INotificationService, NotificationService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     _ = options.UseInMemoryDatabase($"InMemoryDb");
+    options.UseTriggers(triggeroptions =>
+    {
+        triggeroptions.AddTrigger<OnProductSavedTrigger>();
+    });
 });
 
 WebApplication app = builder.Build();

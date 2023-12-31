@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="EntityFrameworkCore.Triggered" Version="3.2.2" />
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="7.0.10" />
@@ -16,6 +17,7 @@
   <ItemGroup>
     <ProjectReference Include="..\Refacto.DotNet.BLL\Refacto.DotNet.BLL.csproj" />
     <ProjectReference Include="..\Refacto.DotNet.DTO\Refacto.DotNet.DTO.csproj" />
+    <ProjectReference Include="..\Refacto.DotNet.Triggers\Refacto.DotNet.Triggers.csproj" />
     <ProjectReference Include="..\Refactor.DotNet.Interfaces\Refacto.DotNet.Interfaces.csproj" />
   </ItemGroup>
 
