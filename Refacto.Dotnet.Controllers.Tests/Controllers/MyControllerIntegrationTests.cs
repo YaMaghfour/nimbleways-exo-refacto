@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Moq;
+using Refacto.DotNet.BLL;
 using Refacto.DotNet.DAL.Database.Context;
 using Refacto.DotNet.DAL.Entities;
 using Refacto.DotNet.Interfaces.Services;
@@ -80,7 +81,8 @@ namespace Refacto.Dotnet.Controllers.Tests.Controllers
                 new Product { LeadTime = 15, Available = 30, Type = "EXPIRABLE", Name = "Butter", ExpiryDate = DateTime.Now.AddDays(26) },
                 new Product { LeadTime = 90, Available = 6, Type = "EXPIRABLE", Name = "Milk", ExpiryDate = DateTime.Now.AddDays(-2) },
                 new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Watermelon", StartDate = DateTime.Now.AddDays(-2), EndDate = DateTime.Now.AddDays(58) },
-                new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Grapes", StartDate = DateTime.Now.AddDays(180), EndDate = DateTime.Now.AddDays(240) }
+                new Product { LeadTime = 15, Available = 30, Type = "SEASONAL", Name = "Grapes", StartDate = DateTime.Now.AddDays(180), EndDate = DateTime.Now.AddDays(240) },
+                new Product { LeadTime = 15, Available = 30, Type = Constants.ProductType.FLASHSALE, Name = "Iphone 15 pro max", StartDate = DateTime.Now.AddDays(-1), EndDate = DateTime.Now.AddDays(240), MaxSellQuantity = 3 },
             };
         }
     }

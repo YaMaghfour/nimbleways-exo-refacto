@@ -8,5 +8,6 @@ namespace Refacto.DotNet.Interfaces.Services
         void NotifyDelay(int leadTime, Product p);
         void HandleSeasonalProduct(Product p);
         void HandleExpiredProduct(Product p);
+        void HandleFlashSaleProduct(Product p);
     }
 }
